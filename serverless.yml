@@ -14,5 +14,5 @@ provider:
       FileBucket:
         Type: AWS::S3::BUCKET
         Properties:
-          BucketName: ${self:custom.fileUploadBucketName}
+          BucketName: ${self:service}-bucket-${self:provider.stage}
           AccessControl: PublicRead
