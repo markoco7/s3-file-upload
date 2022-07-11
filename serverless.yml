@@ -6,13 +6,13 @@ provider:
   stage: dev
   region: us-east-1
 
-  custom:
-    fileUploadBucketName: ${self:service}-bucket-${self:provider.stage}
+custom:
+  fileUploadBucketName: ${self:service}-bucket-${self:provider.stage}
 
-  resources:
-    Resources:
-      FileBucket:
-        Type: AWS::S3::BUCKET
-        Properties:
-          BucketName: ${self:service}-bucket-${self:provider.stage}
-          AccessControl: PublicRead
+resources:
+  Resources:
+    FileBucket:
+      Type: AWS::S3::BUCKET
+      Properties:
+        BucketName: ${self:service}-bucket-${self:provider.stage}
+        AccessControl: PublicRead
