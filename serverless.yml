@@ -20,15 +20,15 @@ functions:
     timeout: 60 #seconds
     memorySize: 128 #mb
     events:
-      -http:
-        path: images
-        method: POST
+      - http:
+          path: images
+          method: POST
     # iamRoleStatements:
     #   - Effect: Allow
     #     Action:
     #       - "s3:Put*"
     #     Resource: arn:aws:s3:::${self:custom.fileUploadBucketName}/*
-    FILE_ULPOAD_BUCKET_NAME:  ${self:custom.fileUploadBucketName}
+    FILE_UPLOAD_BUCKET_NAME:  ${self:custom.fileUploadBucketName}
 
 resources:
   Resources:
