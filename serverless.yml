@@ -28,7 +28,7 @@ functions:
     #     Action:
     #       - "s3:Put*"
     #     Resource: arn:aws:s3:::${self:custom.fileUploadBucketName}/*
-    FILE_ULPOAD_BUCKER_NAME:  ${self:custom.fileUploadBucketName}
+    FILE_ULPOAD_BUCKET_NAME:  ${self:custom.fileUploadBucketName}
 
 resources:
   Resources:
