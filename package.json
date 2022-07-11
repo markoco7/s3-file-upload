@@ -3,6 +3,6 @@
     "aws-sdk": "^2.1172.0"
   },
   "devDependencies": {
-    "serverless-iam-roles-per-function": "^3.1.0"
+    "serverless-iam-roles-per-function": "^3.2.0"
   }
 }
