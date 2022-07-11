@@ -9,8 +9,8 @@ provider:
 custom:
   fileUploadBucketName: ${self:service}-bucket-${self:provider.stage}
 
-plugins:
-  - serverless-iam-roles-per-function
+# plugins:
+#   - serverless-iam-roles-per-function
 
 functions:
   s3FileUploader:
@@ -23,11 +23,11 @@ functions:
       -http:
         path: images
         method: POST
-    iamRoleStatements:
-      - Effect: Allow
-        Action:
-          - "s3:Put*"
-        Resource: arn:aws:s3:::${self:custom.fileUploadBucketName}/*
+    # iamRoleStatements:
+    #   - Effect: Allow
+    #     Action:
+    #       - "s3:Put*"
+    #     Resource: arn:aws:s3:::${self:custom.fileUploadBucketName}/*
     FILE_ULPOAD_BUCKER_NAME:  ${self:custom.fileUploadBucketName}
 
 resources:
