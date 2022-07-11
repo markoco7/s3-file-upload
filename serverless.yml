@@ -12,7 +12,7 @@ custom:
 resources:
   Resources:
     FileBucket:
-      Type: AWS::S3::BUCKET
+      Type: AWS::S3::Bucket
       Properties:
-        BucketName: ${self:service}-bucket-${self:provider.stage}
+        BucketName: ${self:custom.fileUploadBucketName}
         AccessControl: PublicRead
